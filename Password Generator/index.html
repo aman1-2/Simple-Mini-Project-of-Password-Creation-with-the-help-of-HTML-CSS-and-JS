@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Password Generator API</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+
+    <div class="container">
+        <!--We have created a outer div Inside which we have Our Heading at the starting.-->
+        <h1>Password Generator</h1>
+        
+        <div class="display-container">
+            <!--Password text Showing area-->
+            <input readonly placeholder="Password" class="display" data-passwordDisplay />
+            
+            <!--Copy symbol clipboard-->
+            <button class="copyBtn" data-copy>
+                <span class="copy-tooltip" data-copyMsg>
+                  <i class="fa-solid fa-copy"></i>
+                </span>
+            </button>
+      </div>
+
+      <div class="input-container">
+        <!--Passwoed Legth Section-->
+        <div class="length-container">
+            <p>Password Length</p>
+            <p data-lengthDisplay></p>
+        </div>
+
+        <!--Slider section-->
+        <input type="range" min="1" max="20" step="1" class="slider" data-lengthSlider />
+
+        <!--CheckBoxes-->
+        <div class="check">
+          <input type="checkbox" id="uppercase" />
+          <label for="uppercase">Include Uppercase Letters</label>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="lowercase" />
+          <label for="lowercase">Include Lowercase Letters</label>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="numbers" />
+          <label for="numbers">Include Numbers</label>
+        </div>
+
+        <div class="check">
+          <input type="checkbox" id="symbols" />
+          <label for="symbols">Include Symbols</label>
+        </div>
+
+        <div class="strength-container">
+            <!--Strength Indicator Section-->
+            <p>Strength</p>
+            <div class="indicator" data-indicator></div>
+        </div>
+
+        <!--Generate Password Button-->
+
+        <button class="generateBtn">Generate Password</button>
+
+      </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/9cf2549b50.js" crossorigin="anonymous"></script>
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>
